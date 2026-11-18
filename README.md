@@ -1,4 +1,17 @@
 # Doctor Tracker
+## 🔗 Live Demo
+
+| | Link |
+|---|---|
+| **Frontend (Vercel)** | https://frontend-xi-eight-11.vercel.app |
+| **Backend API (Render)** | https://doctor-tracker-uuc4.onrender.com/api |
+| **Health check** | https://doctor-tracker-uuc4.onrender.com/api/health |
+
+**Demo login:** `admin@doctortracker.com` / `Admin@12345`
+
+> The backend runs on Render's free tier. The first request after inactivity can take 30–50 seconds while the server wakes up.
+
+---
 
 ## Description
 

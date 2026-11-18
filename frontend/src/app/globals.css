@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design tokens ───────────────────────────────────────────── */
+:root {
+  --canvas: 244 246 250;
+  --card: 255 255 255;
+  --ink-50: 248 250 252;
+  --ink-100: 241 244 248;
+  --ink-200: 226 231 238;
+  --ink-300: 203 211 222;
+  --ink-400: 148 160 178;
+  --ink-500: 100 114 135;
+  --ink-600: 71 85 105;
+  --ink-700: 51 65 85;
+  --ink-800: 30 41 59;
+  --ink-900: 15 23 42;
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: 7 13 26;
+  --card: 13 22 38;
+  --ink-50: 18 29 49;
+  --ink-100: 24 37 60;
+  --ink-200: 35 51 79;
+  --ink-300: 55 73 104;
+  --ink-400: 110 128 156;
+  --ink-500: 142 158 184;
+  --ink-600: 178 191 210;
+  --ink-700: 204 214 228;
+  --ink-800: 226 232 241;
+  --ink-900: 243 246 250;
+  color-scheme: dark;
+}
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; }
+  body { @apply bg-canvas font-sans text-ink-900 antialiased; font-feature-settings: 'cv11', 'ss01'; }
+  ::selection { @apply bg-brand-200 text-navy-950; }
+  input[type='date']::-webkit-calendar-picker-indicator { opacity: .5; cursor: pointer; }
+  .dark input[type='date']::-webkit-calendar-picker-indicator { filter: invert(1); }
+}
+
+@layer utilities {
+  .font-display { font-weight: 650; letter-spacing: -0.022em; }
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+}
+
+.recharts-wrapper *:focus { outline: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
